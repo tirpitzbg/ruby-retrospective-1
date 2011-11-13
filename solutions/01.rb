@@ -1,35 +1,35 @@
 class Array
 
   def to_hash
-    res = {}
-    self.each do |v|
-      res[v[0]] = v[1]
+    result = {}
+    self.each do |element|
+      result[element[0]] = element[1]
     end
-  res
+  result
   end
   
   def subarray_count(sub)
-    res = 0
-    (0..(self.length - sub.length)).each do |v|
-      res += (sub == self[v, sub.length]) ? 1 : 0
+    result = 0
+    (0..(self.length - sub.length)).each do |element|
+      result += (sub == self[element, sub.length]) ? 1 : 0
     end
-    res
+    result
   end
-  
+	
   def index_by
-    res = {}
-    self.each do |v|
-     res[yield v] = v
+    result = {}
+    each do |element|
+     result[yield element] = element
     end
-    res
+    result
   end
 	
   def occurences_count
-    res = Hash.new(0)
-    self.each do |v|
-      res[v] = self.count(v)
+    result = Hash.new(0)
+    each do |element|
+      result[element] = count(element)
     end
-    res
+    result
   end
   
 end
