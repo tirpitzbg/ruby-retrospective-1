@@ -48,7 +48,7 @@ class Pcm
       v2 = v[v1]
     end
     u, dsc = "% off of every after the ", "% off for every "
-  
+	
     case k
       when :get_one_free then e = "|   (buy " + (v - 1).to_s + ", get 1 free)"
       when :package then e = "|   (get " + v2.to_s + dsc + v1.to_s + ")"
